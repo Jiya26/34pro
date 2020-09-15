@@ -7,8 +7,8 @@ var foodStock;
 function preload()
 {
   //load images here
-  dog=loadImage("images/dogImg.png");
-  happyDog = loadImage("images/dogImag1.png");
+  //dog=loadImage("images/dogImg.png");
+  //happyDog = loadImage("images/dogImag1.png");
 }
 
 function setup() {
@@ -26,9 +26,9 @@ function draw() {
     dog.addImage(happyDog);
   }
   drawSprites();
-  //add styles here
-
 }
+
+  
 
 
 
