@@ -27,7 +27,8 @@ function setup() {
 
 function draw() {  
   background(46,139,87);
-  
+
+  fill("white");
   text("remaining food : "+foods,100,50);
   if(keyWentDown(UP_ARROW)){
     writeStock(foods);
