@@ -30,6 +30,7 @@ function draw() {
 
   fill("white");
   text("remaining food : "+foods,100,50);
+  text("Press UP ARROW to feed the dog",300,450)
   if(keyWentDown(UP_ARROW)){
     writeStock(foods);
     dog1.addImage(happyDog);
