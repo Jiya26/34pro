@@ -16,7 +16,7 @@ function setup() {
   createCanvas(500, 500);
   db = firebase.database();
   foodStock = db.ref('foods');
-  foodStock.on("value",readStock);
+  foodStock.on("value",readStock,showError);
   dog1=createSprite(250,250,20,20);
   dog1.addImage(dog);
   dog1.scale = 0.5;
@@ -39,7 +39,9 @@ function draw() {
 }
 
 function readStock(data){
+  console.log(data);
   foods = data.val();
+  console.log(foods);
 }
 
 function writeStock(x){
@@ -52,6 +54,9 @@ function writeStock(x){
   db.ref('/').update({
     foods : x
   })
+}
+function showError(err){
+  console.log(err);
 }
   
 
